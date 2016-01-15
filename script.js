@@ -1,12 +1,8 @@
 function alerta(){
-	alert("YA VALIO VERGA!!");
+	alert("Balebergalabida");
 }
-
 function hacerclick(){
-	var lista=document.querySelectorAll("#principal p");
-	for(i=0; i<lista.length; i++){
-	lista[i].onclick=alerta;
-	}
+	var elemento=document.getElementsByTagName('p')[0];
+	elemento.addEventListener("click", alerta, false);
 }
-
-window.onload=hacerclick;
+window.addEventListener("load", hacerclick, false);
