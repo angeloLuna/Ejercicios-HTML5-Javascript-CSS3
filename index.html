@@ -3,12 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Este texto es el título del documento</title>
+	<link rel="stylesheet" href="style.css">
 	<script src="script.js"></script>
 </head>
 <body>
-	<div id="principal">
-		<p>Hacer Clic</p>
-		<p>No puede hacer clic</p>
-	</div>
+	<section id="reproductor">
+		<video id="medio"  width="720" height="400" src="http://minkbooks.com/content/trailer.mp4" poster="mon.jpg"></video>
+		<nav>
+			<div id="botones">
+				<button type="button" id="reproducir">Reproducir</button>
+			</div>
+			<div id="barra">
+				<div id="progreso"></div>
+			</div>
+			<div style="clear: both"></div>
+		</nav>
+	</section>
 </body>
 </html>
