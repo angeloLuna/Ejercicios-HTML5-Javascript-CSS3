@@ -24,9 +24,12 @@ function presionar(){
 function estado(){
 	if(!medio.ended){
 		var total=parseInt(medio.currentTime*maximo/medio.duration);
+		avance.innerHTML=medio.currentTime;
+		duracion.innerHTML=medio.duration;
 		progreso.style.width=total+'px';
 	} else{
 		progreso.style.width='0px';
+		avance.innerHTML=medio.duration;
 		reproducir.innerHTML='Reproducir';
 		window.clearInterval(bucle);
 	}
