@@ -2,26 +2,23 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Este texto es el título del documento</title>
+	<title>Formularios</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js"></script>
 </head>
 <body>
-	<h1 id="duracion"></h1>
-	<h2 id="avance"></h2>
-	<section id="reproductor">
-		<audio id="medio">
-			<source src="http://minkbooks.com/content/beach.mp3">
-		</audio>
-		<nav>
-			<div id="botones">
-				<button type="button" id="reproducir">Reproducir</button>
-			</div>
-			<div id="barra">
-				<div id="progreso"></div>
-			</div>
-			<div style="clear: both"></div>
-		</nav>
+	<section>
+		<form name="miformulario" id="miformulario" method="get">
+			<input type="text" name="nombre" id="nombre">
+			<input type="range" name="numero" id="numero" min="0" max="13">
+			<input type="date" name="fecha" id="fecha">
+			<input type="time" name="hora" id="hora">
+			<input type="color" name="micolor" id="micolor">
+			<input type="search" name="busqueda" id="busqueda" placeholder="escriba su búsqueda" autofocus>
+			<input type="submit" value="enviar">
+			<input pattern="[0-9]{5}" name="codigopostal" id="codigopostal"
+			title="inserte los 5 números de su código postal">
+		</form>
 	</section>
 </body>
 </html>
