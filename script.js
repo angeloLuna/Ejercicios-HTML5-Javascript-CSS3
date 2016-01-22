@@ -1,18 +1,26 @@
 function iniciar(){
-	nombre1=document.getElementById("nombre");
-	nombre2=document.getElementById("apellido");
-	nombre1.addEventListener("input", validacion, false);
-	nombre2.addEventListener("input", validacion, false);
-	validacion();
+	edad=document.getElementById("miedad");
+	edad.addEventListener("change", cambiarrango, false);
+	document.informacion.addEventListener("invalid", validacion, true);
+	document.getElementById("enviar").addEventListener("click", enviar, false);
 }
-
-function validacion(){
-	if(nombre1.value=='' && nombre2.value==''){
-		nombre1.setCustomValidity('inserte al menos un nombre');
-		nombre1.style.background='#FFDDDD';
-	}else{
-		nombre1.setCustomValidity('');
-		nombre1.style.background='#FFFFFF';
+function cambiarrango(){
+	var salida=document.getElementById("rango");
+	var calc=edad.value-20;
+	if(calc<20){
+		calc=0;
+		edad.value=20;
+	}
+	salida.innerHTML=calc+' a '+edad.value;
+}
+function validacion(e){
+	var elemento=e.target;
+	elemento.style.background='#FFDDDD';
+	}
+function enviar(){
+	var valido=document.informacion.checkValidity();
+	if(valido){
+	document.informacion.submit();
 	}
 }
 window.addEventListener("load", iniciar, false);

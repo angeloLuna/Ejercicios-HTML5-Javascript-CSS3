@@ -8,10 +8,14 @@
 </head>
 <body>
 	<section>
-		<form name="registro" method="get">Nombre:
-			<input type="text" name="nombre" id="nombre">
-			<input type="text" name="apellido" id="apellido">
-			<input type="submit" id="send" value="ingresar">
+		<form name="informacion" method="get">Usuario:
+			<input pattern="[A-Za-z]{3,}" name="usuario" id="usuario" maxlength="10" required>
+			Email:
+			<input type="email" name="miemail" id="miemail" required>
+			Rango de Edad:
+			<input type="range" name="miedad" id="miedad" min="0" max="80" step="20" value="20">
+			<output id="rango">0 a 20</output>
+			<input type="button" id="enviar" value="ingresar">
 		</form>
 	</section>
 </body>
