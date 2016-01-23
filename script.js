@@ -5,13 +5,13 @@ function iniciar(){
 	lienzo.moveTo(100,100);
 	lienzo.lineTo(200,200);
 	lienzo.lineTo(100,200);
-	lienzo.fill();
-	lienzo.stroke();
+	lienzo.clip();
+
 	lienzo.beginPath();
-	lienzo.moveTo(100,100);
-	lienzo.lineTo(200,200);
-	lienzo.lineTo(200,100);
-	lienzo.fill();
+	for(i=0; i<300; i=i+10){
+		lienzo.moveTo(0,i);
+		lienzo.lineTo(500, i);
+	}
 	lienzo.stroke();
 }
 
