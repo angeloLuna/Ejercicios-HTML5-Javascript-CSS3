@@ -1,26 +1,11 @@
 function iniciar(){
-	edad=document.getElementById("miedad");
-	edad.addEventListener("change", cambiarrango, false);
-	document.informacion.addEventListener("invalid", validacion, true);
-	document.getElementById("enviar").addEventListener("click", enviar, false);
+	var elemento=document.getElementById('lienzo');
+	lienzo=elemento.getContext('2d');
+	lienzo.fillStyle="#000099";
+	lienzo.strokeStyle="#990000";
+	lienzo.strokeRect(100,100,120,120);
+	lienzo.fillRect(110,110, 100, 100);
+	lienzo.clearRect(120,120,80,80);
 }
-function cambiarrango(){
-	var salida=document.getElementById("rango");
-	var calc=edad.value-20;
-	if(calc<20){
-		calc=0;
-		edad.value=20;
-	}
-	salida.innerHTML=calc+' a '+edad.value;
-}
-function validacion(e){
-	var elemento=e.target;
-	elemento.style.background='#FFDDDD';
-	}
-function enviar(){
-	var valido=document.informacion.checkValidity();
-	if(valido){
-	document.informacion.submit();
-	}
-}
+
 window.addEventListener("load", iniciar, false);
